@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkyWings Travel Agency</title>
+
+<style>
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f9ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+header {
+    background-color: #0284c7;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+
+.hero {
+    height: 80vh;
+    background: url('logo.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeZoom 1.5s ease-out forwards;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+@keyframes fadeZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.destinations {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0284c7;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+.packages {
+    background: white;
+    padding: 60px 0;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.package {
+    border: 2px solid #ddd;
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.package:hover {
+    border-color: orange;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.package h3 {
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0284c7;
+    margin-bottom: 20px;
+}
+
+.package ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.package ul li {
+    margin-bottom: 8px;
+}
+
+.package button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #0284c7;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.package button:hover {
+    background-color: #0369a1;
+    transform: scale(1.05);
+}
+
+.best {
+    border: 3px solid orange;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #0284c7;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: orange;
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 32px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+    <div class="container">
+        <h1>Air India Travels</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Packages</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+</header>
+
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Explore the World With Us</h2>
+        <p>Adventure Awaits. Let’s Go!</p>
+    </div>
+</section>
+
+
+<section class="destinations container">
+    <h2 class="section-title">Featured Destinations</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c" alt="Tokyo">
+            <div class="card-content">
+                <h3>Tokyo, Japan</h3>
+                <p>Experience futuristic city life blended with rich traditions.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+            <div class="card-content">
+                <h3>Paris, France</h3>
+                <p>Discover romance, fine cuisine, and the Eiffel Tower.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21" alt="Maldives">
+            <div class="card-content">
+                <h3>Maldives</h3>
+                <p>Relax in luxurious overwater villas with crystal-clear waters.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="packages">
+    <div class="container">
+        <h2 class="section-title">Travel Packages</h2>
+
+        <div class="package-grid">
+            <div class="package">
+                <h3>Basic</h3>
+                <p class="price">Rs.20,000</p>
+                <ul>
+                    <li>3 Days, 2 Nights</li>
+                    <li>Standard Hotel</li>
+                    <li>City Tour</li>
+                </ul>
+                <button>Book Now</button>
+            </div>
+
+            <div class="package best">
+                <h3>Premium (Best Value)</h3>
+                <p class="price">Rs.50,000</p>
+                <ul>
+                    <li>5 Days, 4 Nights</li>
+                    <li>4-Star Hotel</li>
+                    <li>Guided Tours</li>
+                </ul>
+                <button>Book Now</button>
+            </div>
+
+            <div class="package">
+                <h3>Luxury</h3>
+                <p class="price">Rs.95,000</p>
+                <ul>
+                    <li>7 Days, 6 Nights</li>
+                    <li>5-Star Resort</li>
+                    <li>All-Inclusive Tours</li>
+                </ul>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    
+    <p>+91 1234567890 | contact@airindiatravels.com</p>
+    <div>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+    </div>
+    <p>© 2026 Air India Travels. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
